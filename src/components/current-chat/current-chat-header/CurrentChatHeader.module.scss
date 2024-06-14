@@ -1,0 +1,27 @@
+@import "../../../App.module.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+
+  position: relative;
+
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  color: $primary-text;
+  width: 100%;
+  text-align: center;
+}
+
+.options {
+  cursor: pointer;
+  justify-self: flex-end;
+  color: #666668;
+}
