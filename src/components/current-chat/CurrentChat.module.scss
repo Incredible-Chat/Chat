@@ -1,0 +1,10 @@
+@import "../../App.module.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-items: center;
+  height: 100%;
+}
