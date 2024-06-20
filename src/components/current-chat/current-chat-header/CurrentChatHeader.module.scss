@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 20px ;
 
   position: relative;
 
@@ -18,6 +18,11 @@
   color: $primary-text;
   width: 100%;
   text-align: center;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 22px;
+    font-weight: 700;
+  }
 }
 
 .options {

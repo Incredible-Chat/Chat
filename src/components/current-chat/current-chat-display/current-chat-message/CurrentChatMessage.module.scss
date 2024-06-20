@@ -1,4 +1,106 @@
+$user-message-color: #007AFF;
+$not-user-message-color: #F2F2F7;
+
+$message-chunk-margin: -7px;
+
+.message {
+  position: relative;
+  align-self: flex-start;
+
+  background: $not-user-message-color;
+  color: #2C2C2E;
+
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+
+  border-radius: 5px;
+
+  border-top-left-radius: 0px;
+
+  &.userMessage {
+    align-self: flex-end;
+    background: $user-message-color;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+
+    .time {
+      color: white;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 24px;
+  }
+}
+
+.chunk {
+  position: absolute;
+
+  margin-left: $message-chunk-margin;
+  top: -4px;
+
+  @media screen and (min-width: 768px) {
+    top: -8px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    top: -15.5px;
+  }
+
+  &.userChunk {
+    right: $message-chunk-margin;
+    fill: $not-user-message-color;
+  }
+
+  &.userChunk svg {
+    transform: scaleX(-1);
+
+    & path {
+      fill: $user-message-color;
+    }
+  }
+}
+
 .container {
-  background: #007AFF;
-  color: #ffffff;
+  padding: 1px 6px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    padding: 3px 9px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 4px 14px;
+  }
+}
+
+.name {
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.text {
+  padding: 2px 0 0 0;
+}
+
+.time {
+  color: #666668;
+  font-weight: 300;
+  align-self: flex-end;
+  font-size: 12px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 16px;
+  }
 }
